@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: posts } = await useAsyncData('published-posts', () => {
+const { data: posts } = await useAsyncData('published-posts', async () => {
   return listPublishedPosts()
 })
 </script>

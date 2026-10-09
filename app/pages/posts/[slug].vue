@@ -3,7 +3,7 @@ const route = useRoute()
 
 const { data: post } = await useAsyncData(
   () => `post-${route.params.slug}`,
-  () => getPostBySlug(String(route.params.slug)),
+  async () => getPostBySlug(String(route.params.slug)),
 )
 
 if (!post.value) {
